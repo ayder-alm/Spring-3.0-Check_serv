@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" useNaming="true">
+    <!-- Default set of monitored resources -->
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+	<!-- set 'username' and 'password' below -->
+
+	<Resource name="jdbc/ManagerDB" auth="Container" type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="10000" username="root" password="password"
+		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/server_monitor" />
+</Context>

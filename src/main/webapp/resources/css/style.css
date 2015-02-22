@@ -1,0 +1,41 @@
+table{
+    border-collapse: collapse;
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+    border: 3px solid #47f;
+    empty-cells:hide;
+}
+caption 
+{
+  caption-side:top;
+}
+tr,
+td
+{
+  border: 2px solid #47f;
+  padding: 4px;
+  text-align:left;
+}
+
+th
+{
+  background-color:#E0D1FF;
+  text-align:center;
+  height:40px;
+  font-size:larger;
+}
+
+.error
+{
+  color:red;
+  font-weight:bold;
+  font-size:larger;
+}
+
+body
+ {
+  font-family:Arial,Helvetica,sans-serif; 
+  background-color:rgb(245,250,255);
+  font-size:small;
+ }

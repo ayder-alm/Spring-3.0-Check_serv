@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!--Console output appender -->
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%t:%c{1}]: %m - %d%n" />
+		</layout>
+	</appender>
+
+	<!--File output appender -->
+
+	<appender name="fileAppender" class="org.apache.log4j.FileAppender">
+		<param name="file" value="file.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%t:%c{1}]: %m - %d%n" />
+		</layout>
+	</appender>
+
+	<!-- Server-Updater console and file listener -->
+
+	<logger name="server.state.updater">
+		<!-- level info logs -->
+		<level value="info" />
+		<appender-ref ref="consoleAppender" />
+	</logger>
+
+	<!-- Controller console listener -->
+
+	<logger name="my.manager.controller">
+		<!-- level debug logs -->
+		<level value="debug" />
+		<appender-ref ref="consoleAppender" />
+	</logger>
+
+	<!-- Root console listener -->
+
+	<root>
+		<level value="info" />
+		<appender-ref ref="consoleAppender" />
+	</root>
+</log4j:configuration>
